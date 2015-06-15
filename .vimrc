@@ -1,3 +1,4 @@
+set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -89,6 +90,9 @@ let g:airline#extensions#whitespace#enabled = 0
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
+
+" Clipboard
+set clipboard=unnamedplus
 
 " ==== Key shortcuts ====
 
