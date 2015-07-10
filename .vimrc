@@ -11,19 +11,26 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" Faviourate syntax
 Plugin 'chriskempson/base16-vim'
+
 Plugin 'godlygeek/tabular'
+
 Plugin 'plasticboy/vim-markdown'
-" Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+
 Plugin 'vimwiki/vimwiki'
+
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-commentary'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -122,4 +129,9 @@ endif
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
-  endif
+endif
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
