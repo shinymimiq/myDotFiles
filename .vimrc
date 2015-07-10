@@ -23,7 +23,8 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-commentary'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -90,6 +91,8 @@ let g:airline#extensions#whitespace#enabled = 0
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
+
+let g:Powerline_colorscheme = 'base16'
 
 " Clipboard
 set clipboard=unnamedplus
