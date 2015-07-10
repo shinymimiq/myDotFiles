@@ -11,24 +11,33 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" Faviourate syntax
 Plugin 'chriskempson/base16-vim'
+
 Plugin 'godlygeek/tabular'
+
 Plugin 'plasticboy/vim-markdown'
+
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+
 Plugin 'vimwiki/vimwiki'
+
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-commentary'
 " Plugin 'bling/vim-airline'
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'majutsushi/tagbar'
+Plugin 'keith/swift.vim'
+Plugin 'Shougo/vimshell.vim'
+Plugin 'Shougo/vimproc.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,7 +47,7 @@ filetype plugin indent on    " required
 let g:vim_markdown_folding_disabled=1
 
 syntax on
-set number
+set nu
 
 " Colors related
 set background=dark
@@ -50,23 +59,18 @@ colorscheme base16-eighties
 if has("gui_running")
     if has("gui_win32")
         set guifont=Consolas\ 12
-    elseif has("gui_gtk2")
-        set guifont=Source\ Code\ Pro\ 12
     else
-        set guifont=Source\ Code\ Pro\ 12
-    endif
-    if ($TERM_PROGRAM == 'iTerm.app')
-        "highlight LineNr ctermfg=light ctermbg=dark
+        set guifont=Essential\ PragmataPro\ 12
     endif
 endif
 
 set tabstop=4
 set autoindent
-" set copyindent
+set copyindent
 set shiftwidth=4
 set expandtab
-"set cursorcolumn
-"set cursorline
+" set cursorcolumn
+" set cursorline
 set showmatch
 
 " turn on the status bar
@@ -111,5 +115,25 @@ nmap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nnoremap <leader>a :Ag<space>
+nnoremap <leader>] :TagbarToggle<CR>
 nnoremap <leader><space> :FixWhitespace<CR>
+
+" Fix curser in Tmux:
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+" Enable basic mouse behavior such as resizing buffers.
+set mouse=a
+if exists('$TMUX')  " Support resizing in tmux
+  set ttymouse=xterm2
+endif
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
