@@ -60,7 +60,7 @@ if has("gui_running")
     if has("gui_win32")
         set guifont=Consolas\ 12
     else
-        set guifont=Essential\ PragmataPro\ 12
+        set guifont=Essential\ PragmataPro:h13
     endif
 endif
 
@@ -99,7 +99,7 @@ let g:ycm_confirm_extra_conf = 0
 let g:Powerline_colorscheme = 'base16'
 
 " Clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " ==== Key shortcuts ====
 
