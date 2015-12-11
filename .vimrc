@@ -29,7 +29,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-commentary'
-" Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
@@ -38,6 +38,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'keith/swift.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'hdima/python-syntax'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,7 +62,7 @@ if has("gui_running")
     if has("gui_win32")
         set guifont=Consolas\ 12
     else
-        set guifont=Essential\ PragmataPro:h13
+        set guifont=Essential\ PragmataPro:h11
     endif
 endif
 
@@ -95,8 +97,7 @@ let g:airline#extensions#whitespace#enabled = 0
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
-
-let g:Powerline_colorscheme = 'base16'
+let g:airline_powerline_fonts = 1
 
 " Clipboard
 set clipboard=unnamed
@@ -132,8 +133,4 @@ set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
 
