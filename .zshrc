@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+  export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -95,19 +95,21 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 alias tree='tree -C'
 alias zshrc='vi ~/.zshrc'
 
-export PVLIB_HOME=/work/tonliu01/trunk/work/fastsim/build/PVModelLib/internal
+WORK_DIR=/home/tonliu01/Work
+
+export PVLIB_HOME=${WORK_DIR}/trunk/work/fastsim/build/PVModelLib/internal
 export PATH=/arm/devsys-tools/abs:$PATH
 # SYSGEN_VER=`qrt ESL:SystemGenerator:0.0:/validated`
-export MAXCORE_HOME=/work/tonliu01/trunk/work/fastsim/build/Tools/internal/Linux64_GCC-4.8
+export MAXCORE_HOME=${WORK_DIR}/trunk/work/fastsim/build/Tools/internal/Linux64_GCC-4.8
 export PATH=$MAXCORE_HOME/bin:$PATH
 export SYSTEMC_HOME=/arm/warehouse/Accellera/SystemC/2.3.1/4/internal
 export PYTHONPATH=${PVLIB_HOME}/lib/python2.7
 export LD_LIBRARY_PATH=/arm/devsys-tools/collections/gcc/4.8.3/1/linux_3.2-ubuntu_12.04-x86_64/gcc-4.6.3-SYSTEM/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=${MAXCORE_HOME}/lib:$LD_LIBRARY_PATH
 
-export ARMLMD_LICENSE_FILE=7010@cam-lic03
-alias fs="cd /work/tonliu01/trunk/work/fastsim"
-alias home="cd /work/tonliu01"
-alias css="cd /work/tonliu01/trunk/work/fastsim/Platforms/LISA/CSS"
+export ARMLMD_LICENSE_FILE=8224@sha-lic01.asiapac.arm.com
+
+alias fs="cd ${WORK_DIR}/trunk/work/fastsim"
+alias css="cd ${WORK_DIR}/trunk/work/fastsim/Platforms/LISA/CSS"
 alias cpp="cd /work/tonliu01/Personal/CppPrimer"
 alias sv="cd /work/tonliu01/kvs_ashbrook_alpha_2015_10_27"
