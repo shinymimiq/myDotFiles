@@ -30,6 +30,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-commentary'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
