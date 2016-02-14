@@ -109,7 +109,13 @@ export LD_LIBRARY_PATH=${MAXCORE_HOME}/lib:$LD_LIBRARY_PATH
 
 export ARMLMD_LICENSE_FILE=8224@sha-lic01.asiapac.arm.com
 
+alias work="cd ${WORK_DIR}"
 alias fs="cd ${WORK_DIR}/trunk/work/fastsim"
 alias css="cd ${WORK_DIR}/trunk/work/fastsim/Platforms/LISA/CSS"
-alias cpp="cd /work/tonliu01/Personal/CppPrimer"
-alias sv="cd /work/tonliu01/kvs_ashbrook_alpha_2015_10_27"
+alias cpp="cd ${WORK_DIR}/Personal/CppPrimer"
+alias sv="cd ${WORK_DIR}/kit_validation_suite"
+
+# fs useful command
+alias getAshTrunk="export AshbrookTrunk=/arm/warehouse/SysGen/SubSystemModels/0.0/`qrt SysGen SubSystemModels 0.0 :trunk`/models/Linux64_GCC-4.8/FVP_CSS_Ashbrook"
+
+alias ds-5="/home/tonliu01/ARM/DS-5_v5.23.0/bin/eclipse"
