@@ -95,7 +95,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 alias tree='tree -C'
 alias zshrc='vi ~/.zshrc'
 
-WORK_DIR=/home/tonliu01/Work
+# WORK_DIR=/home/tonliu01/Work
+WORK_DIR=/Work/tonliu01
 
 export PVLIB_HOME=${WORK_DIR}/trunk/work/fastsim/build/PVModelLib/internal
 export PATH=/arm/devsys-tools/abs:$PATH
@@ -112,7 +113,7 @@ export ARMLMD_LICENSE_FILE=8224@sha-lic01.asiapac.arm.com
 alias work="cd ${WORK_DIR}"
 alias fs="cd ${WORK_DIR}/trunk/work/fastsim"
 alias css="cd ${WORK_DIR}/trunk/work/fastsim/Platforms/LISA/CSS"
-alias cpp="cd ${WORK_DIR}/Personal/CppPrimer"
+# alias cpp="cd ${WORK_DIR}/Personal/CppPrimer"
 alias sv="cd ${WORK_DIR}/kit_validation_suite"
 
 # fs useful command
