@@ -191,3 +191,4 @@ bar {
 
 bindsym Control+$mod+l exec sh ~/.i3/i3lock.sh
 exec xautolock -time 10 -locker '~/.i3/i3lock.sh' &
+exec --no-startup-id feh --bg-scale ~/Pictures/galaxy.jpg

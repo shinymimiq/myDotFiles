@@ -95,8 +95,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 alias tree='tree -C'
 alias zshrc='vi ~/.zshrc'
 
-# WORK_DIR=/home/tonliu01/Work
-WORK_DIR=/Work/tonliu01
+WORK_DIR=/home/tonliu01/Work
+# WORK_DIR=/Work/tonliu01
 
 export PVLIB_HOME=${WORK_DIR}/trunk/work/fastsim/build/PVModelLib/internal
 export PATH=/arm/devsys-tools/abs:$PATH
@@ -117,6 +117,6 @@ alias css="cd ${WORK_DIR}/trunk/work/fastsim/Platforms/LISA/CSS"
 alias sv="cd ${WORK_DIR}/kit_validation_suite"
 
 # fs useful command
-alias getAshTrunk="export AshbrookTrunk=/arm/warehouse/SysGen/SubSystemModels/0.0/`qrt SysGen SubSystemModels 0.0 :trunk`/models/Linux64_GCC-4.8/FVP_CSS_Ashbrook"
+# alias getAshTrunk="export AshbrookTrunk=/arm/warehouse/SysGen/SubSystemModels/0.0/`qrt SysGen SubSystemModels 0.0 :trunk`/models/Linux64_GCC-4.8/FVP_CSS_Ashbrook"
 
 alias ds-5="/home/tonliu01/ARM/DS-5_v5.23.0/bin/eclipse"
