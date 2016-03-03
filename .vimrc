@@ -60,6 +60,8 @@ set t_Co=256
 let base16colorspace=256
 colorscheme base16-eighties
 
+hi Normal guibg=NONE ctermbg=NONE
+
 " set the font in gvim
 if has("gui_running")
     if has("gui_win32")
