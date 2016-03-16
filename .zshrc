@@ -8,7 +8,8 @@ export ZSH=/home/tonliu01/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="mh"
 # ZSH_THEME="sorin"
-ZSH_THEME="miloshadzic"
+# ZSH_THEME="miloshadzic"
+ZSH_THEME="theunraveler"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -33,7 +34,7 @@ ZSH_THEME="miloshadzic"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -52,7 +53,7 @@ ZSH_THEME="miloshadzic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases ubuntu)
+plugins=(git common-aliases ubuntu svn cp)
 
 # User configuration
 
@@ -120,3 +121,4 @@ alias sv="cd ${WORK_DIR}/kit_validation_suite"
 # alias getAshTrunk="export AshbrookTrunk=/arm/warehouse/SysGen/SubSystemModels/0.0/`qrt SysGen SubSystemModels 0.0 :trunk`/models/Linux64_GCC-4.8/FVP_CSS_Ashbrook"
 
 alias ds-5="/home/tonliu01/ARM/DS-5_v5.23.0/bin/eclipse"
+alias pdfreader="/home/tonliu01/Developer/foxitsoftware/foxitreader/FoxitReader.sh&"

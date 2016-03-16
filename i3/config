@@ -189,6 +189,7 @@ bar {
         status_command i3status -c ~/.i3/i3status.conf
 }
 
-bindsym Control+$mod+l exec sh ~/.i3/i3lock.sh
+bindsym Mod1+l exec sh ~/.i3/i3lock.sh
+# bindsym Control+$mod+l exec sh ~/.i3/i3lock.sh
 exec xautolock -time 10 -locker '~/.i3/i3lock.sh' &
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
