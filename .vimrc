@@ -76,9 +76,11 @@ set autoindent
 set copyindent
 set shiftwidth=4
 set expandtab
-" set cursorcolumn
-" set cursorline
+set cursorcolumn
+set cursorline
 set showmatch
+" set relative line number
+set rnu
 
 " turn on the status bar
 set laststatus=2
@@ -121,7 +123,7 @@ nmap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nnoremap <leader>a :Ag<space>
-nnoremap <leader>] :TagbarToggle<CR>
+" nnoremap <leader>] :TagbarToggle<CR>
 nnoremap <leader><space> :FixWhitespace<CR>
 
 " Fix curser in Tmux:

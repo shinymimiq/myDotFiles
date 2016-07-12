@@ -9,7 +9,10 @@ export ZSH=/home/tonliu01/.oh-my-zsh
 # ZSH_THEME="mh"
 # ZSH_THEME="sorin"
 # ZSH_THEME="miloshadzic"
-ZSH_THEME="theunraveler"
+# ZSH_THEME="theunraveler"
+# ZSH_THEME="ys"
+ZSH_THEME="agnoster"
+DEFAULT_USER="tonliu01"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -103,7 +106,7 @@ export PVLIB_HOME=${WORK_DIR}/trunk/work/fastsim/build/PVModelLib/internal
 export PATH=/arm/devsys-tools/abs:$PATH
 # SYSGEN_VER=`qrt ESL:SystemGenerator:0.0:/validated`
 export MAXCORE_HOME=${WORK_DIR}/trunk/work/fastsim/build/Tools/internal/Linux64_GCC-4.8
-export PATH=$MAXCORE_HOME/bin:$PATH
+export PATH=$PATH:$MAXCORE_HOME/bin
 export SYSTEMC_HOME=/arm/warehouse/Accellera/SystemC/2.3.1/4/internal
 export PYTHONPATH=${PVLIB_HOME}/lib/python2.7
 export LD_LIBRARY_PATH=/arm/devsys-tools/collections/gcc/4.8.3/1/linux_3.2-ubuntu_12.04-x86_64/gcc-4.6.3-SYSTEM/lib64:$LD_LIBRARY_PATH
@@ -120,5 +123,8 @@ alias sv="cd ${WORK_DIR}/kit_validation_suite"
 # fs useful command
 # alias getAshTrunk="export AshbrookTrunk=/arm/warehouse/SysGen/SubSystemModels/0.0/`qrt SysGen SubSystemModels 0.0 :trunk`/models/Linux64_GCC-4.8/FVP_CSS_Ashbrook"
 
-alias ds-5="/home/tonliu01/ARM/DS-5_v5.23.0/bin/eclipse"
+# alias ds-5="/home/tonliu01/ARM/DS-5_v5.23.0/bin/eclipse"
+alias ds-5="/usr/local/DS-5_v5.24.0/bin/eclipse &"
+export PATH=$PATH:/home/tonliu01/pycharm-community-2016.1.4/bin
 alias pdfreader="/home/tonliu01/Developer/foxitsoftware/foxitreader/FoxitReader.sh&"
+source /home/tonliu01/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

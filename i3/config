@@ -189,6 +189,11 @@ bar {
         status_command i3status -c ~/.i3/i3status.conf
 }
 
+# Floating Window
+for_window [class="isim_system"] floating enable
+for_window [class="XTerm"] floating enable
+for_window [class="FVP*"] floating enable
+
 bindsym Mod1+l exec sh ~/.i3/i3lock.sh
 # bindsym Control+$mod+l exec sh ~/.i3/i3lock.sh
 exec xautolock -time 10 -locker '~/.i3/i3lock.sh' &
