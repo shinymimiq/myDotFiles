@@ -59,6 +59,7 @@ set background=dark
 set t_Co=256
 let base16colorspace=256
 colorscheme base16-eighties
+let g:airline_theme='base16'
 
 hi Normal guibg=NONE ctermbg=NONE
 
@@ -79,6 +80,7 @@ set expandtab
 set cursorcolumn
 set cursorline
 set showmatch
+set colorcolumn=80
 " set relative line number
 set rnu
 
@@ -107,7 +109,8 @@ let g:ycm_confirm_extra_conf = 0
 let g:airline_powerline_fonts = 1
 
 " Clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard=unnamedplus
 
 " ==== Key shortcuts ====
 
@@ -140,4 +143,3 @@ set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
-
