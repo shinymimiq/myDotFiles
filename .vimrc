@@ -57,8 +57,12 @@ set nu
 " Colors related
 set background=dark
 set t_Co=256
-let base16colorspace=256
-colorscheme base16-eighties
+" let base16colorspace=256
+" colorscheme base16-eighties
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 let g:airline_theme='base16'
 
 hi Normal guibg=NONE ctermbg=NONE

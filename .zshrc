@@ -93,8 +93,8 @@ source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 alias tree='tree -C'
 alias zshrc='vi ~/.zshrc'
@@ -102,15 +102,17 @@ alias zshrc='vi ~/.zshrc'
 WORK_DIR=/home/tonliu01/Work
 # WORK_DIR=/Work/tonliu01
 
-export PVLIB_HOME=${WORK_DIR}/trunk/work/fastsim/build/PVModelLib/internal
+# export PVLIB_HOME=${WORK_DIR}/trunk/work/fastsim/build/PVModelLib/internal
+export PVLIB_HOME=${WORK_DIR}/trunk/warehouse/SysGen/PVModelLib/0.0/0/external
+export MAXCORE_HOME=${WORK_DIR}/trunk/warehouse/SysGen/Tools/0.0/0/external/Linux64
 export PATH=/arm/devsys-tools/abs:$PATH
 # SYSGEN_VER=`qrt ESL:SystemGenerator:0.0:/validated`
-export MAXCORE_HOME=${WORK_DIR}/trunk/work/fastsim/build/Tools/internal/Linux64_GCC-4.8
+# export MAXCORE_HOME=${WORK_DIR}/trunk/work/fastsim/build/Tools/internal/Linux64_GCC-4.8
 export PATH=$PATH:$MAXCORE_HOME/bin
 export SYSTEMC_HOME=/arm/warehouse/Accellera/SystemC/2.3.1/4/internal
 export PYTHONPATH=${PVLIB_HOME}/lib/python2.7
-export LD_LIBRARY_PATH=/arm/devsys-tools/collections/gcc/4.8.3/1/linux_3.2-ubuntu_12.04-x86_64/gcc-4.6.3-SYSTEM/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=${MAXCORE_HOME}/lib:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/arm/devsys-tools/collections/gcc/4.8.3/1/linux_3.2-ubuntu_12.04-x86_64/gcc-4.6.3-SYSTEM/lib64:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=${MAXCORE_HOME}/lib:$LD_LIBRARY_PATH
 
 export ARMLMD_LICENSE_FILE=8224@sha-lic01.asiapac.arm.com
 
