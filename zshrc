@@ -21,7 +21,6 @@ export LANG=en_GB.UTF-8
 export WORKSPACE=$HOME/Developer
 
 
-
 # navigation through command history
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -51,16 +50,25 @@ setopt pushd_ignore_dups
 setopt pushdminus
 
 
-# ZSH Plugins
+# zplug 
+# Check if zplug is installed
+ZPLUG_HOME=$WORKSPACE/zsh/zplug
+if [[ ! -d $ZPLUG_HOME ]]; then
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+    source $ZPLUG_HOME/init.zsh && zplug update
+fi
+
 source $WORKSPACE/zsh/zplug/init.zsh
 # ====================================
 zplug "zsh-users/zsh-autosuggestions"
-# zplug "zsh-users/zsh-completions"
 
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "nyquase/vi-mode"
-zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-completions", depth:1
 
+# Use lib/clipboard plugin only on Mac
+zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/git",  from:oh-my-zsh, as:plugin
 
 
 # Set the priority when loading
@@ -78,7 +86,8 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
+# zplug load --verbose
+zplug load  # Quitely load plugins
 # =============================
 # END ZSH PLUGINs
 
@@ -126,32 +135,6 @@ function d () {
   fi
 }
 compdef _dirs d
-
-# git
-alias g="git"
-alias gcl='git clone --recurse-submodules'
-alias gl="git pull"
-alias gp="git push"
-alias ga="git add"
-alias gb="git branch"
-alias gc="git commit -v"
-alias gc!='git commit -v --amend'
-alias gco="git checkout"
-alias gcb='git checkout -b'
-alias gcount='git shortlog -sn'
-alias gst="git status"
-alias grb="git rebase"
-alias grbi="git rebase --interactive"
-alias gsta='git stash push'
-alias gstl='git stash list'
-alias gstp='git stash pop'
-alias gd='git diff'
-alias glg='git log --stat'
-
-# tmux
-alias ta='tmux attach -t'
-
-
 
 # =======================
 # END ALIAS
