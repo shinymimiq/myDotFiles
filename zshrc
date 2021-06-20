@@ -85,11 +85,12 @@ alias nv="nvim"
 alias ws="cd $WORKSPACE"
 
 # common
-alias l='ls --color=auto -lFh'     #size,show type,human readable
-alias la='ls --color=auto -lAFh'   #long list,show almost all,show type,human readable
-alias lr='ls --color=auto -tRFh'   #sorted by date,recursive,show type,human readable
-alias lt='ls --color=auto -ltFh'   #long list,sorted by date,show type,human readable
-alias ll='ls --color=auto -l'      #long list
+alias ls='ls -G'     #size,show type,human readable
+alias l='ls -lGFh'     #size,show type,human readable
+alias la='ls -lGAFh'   #long list,show almost all,show type,human readable
+alias lr='ls -tGRFh'   #sorted by date,recursive,show type,human readable
+alias lt='ls -lGtFh'   #long list,sorted by date,show type,human readable
+alias ll='ls -lG'      #long list
 
 alias rm='rm -i'
 alias cp='cp -i'
