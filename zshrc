@@ -98,12 +98,13 @@ alias nv="nvim"
 alias ws="cd $WORKSPACE"
 
 # common
-alias ls='ls -G'     #size,show type,human readable
-alias l='ls -lGFh'     #size,show type,human readable
-alias la='ls -lGAFh'   #long list,show almost all,show type,human readable
-alias lr='ls -tGRFh'   #sorted by date,recursive,show type,human readable
-alias lt='ls -lGtFh'   #long list,sorted by date,show type,human readable
-alias ll='ls -lG'      #long list
+alias ls='exa'     #size,show type,human readable
+alias l='exa -1'
+alias la='exa -la'  #long list, all
+alias lr='exa -lR'  #recursive
+alias lt='exa -T'   #tree view
+alias lg='exa -G'   #grid view
+alias ll='exa -l'   #long list
 
 alias rm='rm -i'
 alias cp='cp -i'
