@@ -28,10 +28,32 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 # 
-setopt nomatch         # show completion menu on successive tab press
-setopt menucomplete
 setopt extendedglob
 setopt interactive_comments
+
+unsetopt menu_complete   # do not autoselect the first completion entry
+unsetopt flowcontrol
+setopt auto_menu         # show completion menu on successive tab press
+setopt complete_in_word
+setopt always_to_end
+
+# should this be in keybindings?
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+# completions
+# autoload -Uz compinit
+# zstyle ':completion:*' menu select
+# zstyle ':completion::complete:lsof:*' menu yes select
+zmodload zsh/complist
+# compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+## History file configuration
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+[ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
+[ "$SAVEHIST" -lt 10000 ] && SAVEHIST=10000
 
 ## History command configuration
 setopt extended_history       # record timestamp of command in HISTFILE
@@ -169,6 +191,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 if ! type "exa" > /dev/null; then
   echo "NO exa installed"
-  exit 1
 fi
 
+if [[ ! -z "${WORKING_MACHINE}" ]]; then
+    source $WORKSPACE/myDotFiles/zsh-work-local
+fi
