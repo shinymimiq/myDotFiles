@@ -9,7 +9,9 @@ local bo = vim.bo
 -- window local option
 local wo = vim.wo
 
-
+vim.o.title = true
+TERMINAL = vim.fn.expand('$TERMINAL')
+vim.cmd('let &titleold="'..TERMINAL..'"')
 vim.o.termguicolors = true
 
 vim.wo.number = true -- line number
@@ -18,7 +20,10 @@ vim.bo.tabstop = 2
 vim.bo.expandtab = true
 vim.bo.smartindent = true
 vim.o.showtabline = 2 -- always show tab on top
+vim.wo.cursorline = true -- show current line
 vim.wo.wrap = true -- wrap line
+
+vim.o.titlestring="%<%F%=%l/%L - nvim"
 
 vim.o.shiftwidth = 2
 vim.o.shiftround = true
@@ -50,6 +55,7 @@ require('keymappings')
 require('plugins')
 require('telescope-settings')
 require('compe-settings')
+require('galaxyline-settings')
 
 
 -- Theme

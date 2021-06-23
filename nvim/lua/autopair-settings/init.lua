@@ -23,3 +23,7 @@ npairs.add_rules({
   Rule("$", "$", "lua")
     :with_pair(ts_conds.is_not_ts_node({'function'}))
 })
+
+require('nvim-autopairs').setup({
+  disable_filetype = { "TelescopePrompt" , "vim" },
+})

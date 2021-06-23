@@ -38,10 +38,7 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
 
   -- status line
-  use {
-    'glepnir/galaxyline.nvim',
-    branch = 'main',
-  }
+  use { 'glepnir/galaxyline.nvim' }
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -51,6 +48,12 @@ return require('packer').startup(function()
 
   -- git
   use {'f-person/git-blame.nvim'}
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
 
   use {"terrortylor/nvim-comment"}
   use {"windwp/nvim-autopairs"}
