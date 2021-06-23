@@ -56,9 +56,9 @@ local mode_map = {
   [''] = {'V-BLOCK',  colors.violet},
   ['s']  = {'SELECT',   colors.yellow},
   ['S']  = {'S-LINE',   colors.orange},
-  [''] = {'S-BLOCK',  colors.dark_yellow},
+  [''] = {'S-BLOCK',  colors.orange},
   ['c']  = {'COMMAND',  colors.orange},
-  ['t']  = {'TERMINAL', colors.grey},
+  ['t']  = {'TERMINAL', colors.cyan},
   ['Rv'] = {'VIRTUAL',  colors.red},
   ['rm'] = {'--MORE',   colors.cyan},
   -- Fallback mode.
