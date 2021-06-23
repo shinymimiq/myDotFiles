@@ -56,6 +56,7 @@ require('plugins')
 require('telescope-settings')
 require('compe-settings')
 require('galaxyline-settings')
+require('treesitter-settings')
 
 
 -- Theme
