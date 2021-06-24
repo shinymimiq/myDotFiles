@@ -1,14 +1,4 @@
 
-
-local opt = vim.opt
-
--- global option
-local o = vim.o 
--- buffer local option
-local bo = vim.bo
--- window local option
-local wo = vim.wo
-
 vim.o.title = true
 TERMINAL = vim.fn.expand('$TERMINAL')
 vim.cmd('let &titleold="'..TERMINAL..'"')
@@ -33,7 +23,7 @@ vim.o.mouse = "a" -- Enable mouse
 vim.o.splitbelow = true  -- Horizontal splits to below
 vim.o.splitright = true  -- Vertical splits to right
 vim.o.clipboard = 'unnamedplus' -- system clipboard
-vim.o.showmode = false -- No need for -- INSERT -- 
+vim.o.showmode = false -- No need for -- INSERT --
 
 vim.o.pumheight = 10 -- popup menu smaller
 vim.o.fileencoding = 'utf-8' -- file encoding
@@ -57,6 +47,9 @@ require('telescope-settings')
 require('compe-settings')
 require('galaxyline-settings')
 require('treesitter-settings')
+-- require('lsp-install-settings')
+-- require('lspInstall-settings')
+require('autopair-settings')
 
 
 -- Theme

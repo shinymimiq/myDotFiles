@@ -19,9 +19,9 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- lsp
+  use {"kabouzeid/nvim-lspinstall"}
   use {"neovim/nvim-lspconfig"}
   use {"glepnir/lspsaga.nvim"}
-  use {"kabouzeid/nvim-lspinstall"}
 
   -- completion
   use {"hrsh7th/nvim-compe"}
