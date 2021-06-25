@@ -35,6 +35,9 @@ vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
 -- for nvim compe
 vim.o.completeopt = "menuone,noselect"
 
+-- for whichkey
+vim.o.timeoutlen = 100
+
 
 -- Enable Packer with Plugins
 require('packer_settings')
@@ -52,6 +55,7 @@ require('treesitter-settings')
 -- require('lspInstall-settings')
 require('autopair-settings')
 require('nvimtree-settings')
+require('whichkey-settings')
 
 
 -- Theme

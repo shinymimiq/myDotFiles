@@ -56,6 +56,9 @@ return require('packer').startup(function()
     }
   }
 
+  -- Whichkey
+  use {"folke/which-key.nvim"}
+
 
   use {"terrortylor/nvim-comment"}
   use {"windwp/nvim-autopairs"}
