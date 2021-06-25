@@ -56,3 +56,40 @@ require("which-key").setup{
     v = { "j", "k" },
   },
 }
+
+local opts = {
+  mode = "n", -- NORMAL mode
+  -- prefix: use "<leader>f" for example for mapping everything related to finding files
+  -- the prefix is prepended to every mapping part of `mappings`
+  prefix = "<leader>",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = false, -- use `nowait` when creating keymaps
+}
+
+local keymap = {
+  ["/"] = "Comment",
+  ["e"] = "Tree View",
+  ["f"] = "Find File",
+  ["r"] = "Live Grep",
+  g = {
+    name = "Git command",
+    j = {"<cmd>Gitsigns next_hunk<CR>", "Next Hunk"},
+    k = {"<cmd>Gitsigns prev_hunk<CR>", "Previous Hunk"},
+    p = {"<cmd>Gitsigns preview_hunk<CR>", "Preview Hunk"},
+    r = {"<cmd>Gitsigns reset_hunk<CR>", "Reset Hunk"},
+    R = {"<cmd>Gitsigns reset_buffer<CR>", "Reset Buffer"},
+    l = {"<cmd>Gitsigns blame_line<CR>", "Blame Current Line"},
+    s = {"<cmd>Gitsigns stage_hunk<CR>", "Stage Hunk"},
+    S = {"<cmd>Gitsigns stage_buffer<CR>", "Stage Buffer"},
+    u = {"<cmd>Gitsigns undo_stage_hunk<CR>", "Undo Stage Hunk"},
+    o = {"<cmd>Telescope git_status theme=get_dropdown<CR>", "Changed Files List"},
+    b = {"<cmd>Telescope git_branches theme=get_dropdown<CR>", "Checkout branch"},
+    c = {"<cmd>Telescope git_commits theme=get_dropdown<CR>", "Checkout commits"},
+    C = {"<cmd>Telescope git_bcommits theme=get_dropdown<CR>", "Checkout commits on current file"},
+  }
+}
+
+local wk = require("which-key")
+wk.register(keymap, opts)
