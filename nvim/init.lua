@@ -2,6 +2,8 @@
 vim.o.title = true
 TERMINAL = vim.fn.expand('$TERMINAL')
 vim.cmd('let &titleold="'..TERMINAL..'"')
+vim.o.titlestring="%<%F%=%l/%L - nvim"
+
 vim.o.termguicolors = true
 
 vim.wo.number = true -- line number
@@ -13,7 +15,6 @@ vim.o.showtabline = 2 -- always show tab on top
 vim.wo.cursorline = true -- show current line
 vim.wo.wrap = true -- wrap line
 
-vim.o.titlestring="%<%F%=%l/%L - nvim"
 
 vim.o.shiftwidth = 2
 vim.o.shiftround = true
@@ -50,6 +51,7 @@ require('treesitter-settings')
 -- require('lsp-install-settings')
 -- require('lspInstall-settings')
 require('autopair-settings')
+require('nvimtree-settings')
 
 
 -- Theme

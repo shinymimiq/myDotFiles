@@ -37,8 +37,9 @@ return require('packer').startup(function()
   use {'kyazdani42/nvim-tree.lua'}
   use 'kyazdani42/nvim-web-devicons'
 
-  -- status line
+  -- statusline and tabline
   use { 'glepnir/galaxyline.nvim' }
+  use {'romgrk/barbar.nvim'}
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -54,6 +55,7 @@ return require('packer').startup(function()
       'nvim-lua/plenary.nvim'
     }
   }
+
 
   use {"terrortylor/nvim-comment"}
   use {"windwp/nvim-autopairs"}

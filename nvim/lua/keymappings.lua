@@ -63,3 +63,10 @@ vim.cmd("nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll
 vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
 vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
 
+
+-- Barbar
+-- Tab switch buffer
+vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>c', ':BufferClose<CR>', {noremap = true, silent = true})
+
