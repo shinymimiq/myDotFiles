@@ -58,6 +58,11 @@ require('nvimtree-settings')
 require('whichkey-settings')
 
 
+-- lsp
+require('lsp/efm')
+require('lsp/js')
+require('lsp/lua')
+
 -- Theme
 require('onedark').setup()
 

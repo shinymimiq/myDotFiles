@@ -1,13 +1,30 @@
+local action = require('telescope.actions')
+
 require('telescope').setup {
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-c>"] = action.close,
+        ["<C-j>"] = action.move_selection_next,
+        ["<C-k>"] = action.move_selection_previous,
+        ["<C-q>"] = action.smart_send_to_qflist + action.open_qflist
+      },
+      n = {
+        ["<C-c>"] = action.close,
+        ["<C-j>"] = action.move_selection_next,
+        ["<C-k>"] = action.move_selection_previous,
+      }
+    },
+  },
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
       override_generic_sorter = false, -- override the generic sorter
       override_file_sorter = true,     -- override the file sorter
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                       -- the default case_mode is "smart_case"
+                                      -- the default case_mode is "smart_case"
     }
-  }
+  },
 }
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:

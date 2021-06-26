@@ -25,8 +25,8 @@ vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<CR>', {silent = t
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- Telescope
-vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files theme=get_dropdown<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<Leader>r', ':Telescope live_grep theme=get_dropdown<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files theme=get_ivy<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>r', ':Telescope live_grep theme=get_ivy<CR>', {noremap = true, silent = true})
 
 -- search highlight
 vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})

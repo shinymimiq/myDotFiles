@@ -11,7 +11,4 @@ require('gitsigns').setup()
 
 
 
-require('lsp/efm')
-require('lsp/js')
-require('lsp/lua')
 
