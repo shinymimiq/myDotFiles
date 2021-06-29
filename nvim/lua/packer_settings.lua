@@ -42,7 +42,7 @@ return require('packer').startup(function()
   use {'romgrk/barbar.nvim'}
 
   use {
-    'nvim-telescope/telescope.nvim',
+    'shinymimiq/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }

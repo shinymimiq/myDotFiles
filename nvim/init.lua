@@ -42,9 +42,6 @@ vim.o.timeoutlen = 100
 -- Enable Packer with Plugins
 require('packer_settings')
 
--- Keymap settings
-require('keymappings')
-
 -- plugin settings
 require('plugins')
 require('telescope-settings')
@@ -55,8 +52,9 @@ require('treesitter-settings')
 -- require('lspInstall-settings')
 require('autopair-settings')
 require('nvimtree-settings')
-require('whichkey-settings')
 
+-- Keymap settings (Include Which-key settings)
+require('keymappings')
 
 -- lsp
 require('lsp/efm')
