@@ -162,37 +162,30 @@ compdef _dirs d
 # =======================
 # END ALIAS
 
-
-# PROMPT
-# =========================
-
-
-# ==============================
-# END prompt
-
-
 # KeyBinding
 # =========================
 bindkey '^o' autosuggest-accept
 bindkey "^k" up-line-or-beginning-search # Up
 bindkey "^j" down-line-or-beginning-search # Down
 
-# Customize 
+# Source work zshrc
+if [[ ! -z "${WORKING_MACHINE}" ]]; then
+    source $WORKSPACE/myDotFiles/zsh-work-local
+fi
+
+
+# ========================
+#  Customize for apps installed
+# ========================
+if ! type "exa" > /dev/null; then
+  echo "NO exa installed"
+fi
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $WORKSPACE/myDotFiles/p10k.zsh ]] || source $WORKSPACE/myDotFiles/p10k.zsh
-
-
-if ! type "exa" > /dev/null; then
-  echo "NO exa installed"
-fi
-
-if [[ ! -z "${WORKING_MACHINE}" ]]; then
-    source $WORKSPACE/myDotFiles/zsh-work-local
-fi
