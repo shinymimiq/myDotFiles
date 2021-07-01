@@ -40,7 +40,7 @@ vim.o.timeoutlen = 100
 
 
 -- Enable Packer with Plugins
-require('packer_settings')
+require('packer-plugins-list')
 
 -- plugin settings
 require('plugins')

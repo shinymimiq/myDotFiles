@@ -59,6 +59,12 @@ return require('packer').startup(function()
   -- Whichkey
   use {"folke/which-key.nvim"}
 
+  -- Lazygit
+  use {
+      "kdheepak/lazygit.nvim",
+      cmd = "LazyGit",
+  }
+
 
   use {"terrortylor/nvim-comment"}
   use {"windwp/nvim-autopairs"}
