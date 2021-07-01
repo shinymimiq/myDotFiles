@@ -10,6 +10,22 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
+local packer_installed, packer = pcall(require, "packer")
+if not packer_installed then
+  return
+end
+
+packer.init {
+  -- compile_path = vim.fn.stdpath('data')..'/site/pack/loader/start/packer.nvim/plugin/packer_compiled.vim',
+  git = {
+    clone_timeout = 500
+  },
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "single" }
+    end,
+  },
+}
 
 --
 vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
@@ -65,6 +81,16 @@ return require('packer').startup(function()
       cmd = "LazyGit",
   }
 
+  -- Floating term
+  use {
+    "numtostr/FTerm.nvim",
+    config = function()
+      require("FTerm").setup( {
+	dimensions = {height = 0.8, width = 0.8, x = 0.5, y = 0.5},
+	border = 'single' -- or 'double'
+      })
+    end
+}
 
   use {"terrortylor/nvim-comment"}
   use {"windwp/nvim-autopairs"}

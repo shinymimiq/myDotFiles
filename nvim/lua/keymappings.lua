@@ -71,7 +71,9 @@ vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll
 vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
 
 
-
+-- FTerm
+vim.api.nvim_set_keymap("n", '<C-i>', '<CMD>lua require("FTerm").toggle()<CR>', {noremap = true, silent= true})
+vim.api.nvim_set_keymap("t", '<C-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', {noremap = true, silent= true})
 
 
 -- =====================
@@ -154,6 +156,7 @@ local keymap = {
   ["r"] = "Live Grep",
   g = {
     name = "Git command",
+    g = {"<cmd>LazyGit<CR>", "LazyGit"},
     j = {"<cmd>Gitsigns next_hunk<CR>", "Next Hunk"},
     k = {"<cmd>Gitsigns prev_hunk<CR>", "Previous Hunk"},
     p = {"<cmd>Gitsigns preview_hunk<CR>", "Preview Hunk"},
