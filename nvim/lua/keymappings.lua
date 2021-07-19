@@ -29,6 +29,13 @@ vim.cmd("inoremap ∆ <Esc>:m .+1CR>==gi")
 vim.cmd("inoremap ˚ <Esc>:m .-2<CR>==gi")
 vim.cmd("vnoremap ∆ :m '>+1CR>gv=gv")
 vim.cmd("vnoremap ˚ :m '>-2<CR>gv=gv")
+-- Linux
+vim.cmd("nnoremap <A-j> :m .+1<CR>==")
+vim.cmd("nnoremap <A-k> :m .-2<CR>==")
+vim.cmd("inoremap <A-j> <Esc>:m .+1CR>==gi")
+vim.cmd("inoremap <A-k> <Esc>:m .-2<CR>==gi")
+vim.cmd("vnoremap <A-j> :m '>+1CR>gv=gv")
+vim.cmd("vnoremap <A-k> :m '>-2<CR>gv=gv")
 
 -- Barbar
 -- Tab switch buffer
