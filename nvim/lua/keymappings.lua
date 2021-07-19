@@ -21,6 +21,15 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
 
+-- Move oneline up/down
+-- macOS version
+vim.cmd("nnoremap ∆ :m .+1<CR>==")
+vim.cmd("nnoremap ˚ :m .-2<CR>==")
+vim.cmd("inoremap ∆ <Esc>:m .+1CR>==gi")
+vim.cmd("inoremap ˚ <Esc>:m .-2<CR>==gi")
+vim.cmd("vnoremap ∆ :m '>+1CR>gv=gv")
+vim.cmd("vnoremap ˚ :m '>-2<CR>gv=gv")
+
 -- Barbar
 -- Tab switch buffer
 vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', {noremap = true, silent = true})
