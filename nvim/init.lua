@@ -60,6 +60,7 @@ require('keymappings')
 require('lsp/efm')
 require('lsp/js')
 require('lsp/lua')
+require('lsp/cpp')
 
 -- Theme
 require('onedark').setup()
