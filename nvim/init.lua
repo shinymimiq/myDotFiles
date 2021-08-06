@@ -29,6 +29,8 @@ vim.o.showmode = false -- No need for -- INSERT --
 vim.o.pumheight = 10 -- popup menu smaller
 vim.o.fileencoding = 'utf-8' -- file encoding
 vim.o.cmdheight = 2 -- more space for displaying message
+vim.o.hidden = true, -- required to keep multiple buffers and open multiple buffers
+
 
 vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
 
@@ -52,6 +54,7 @@ require('treesitter-settings')
 -- require('lspInstall-settings')
 require('autopair-settings')
 require('nvimtree-settings')
+require('toggleterm-settings')
 
 -- Keymap settings (Include Which-key settings)
 require('keymappings')

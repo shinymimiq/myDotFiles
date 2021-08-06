@@ -88,8 +88,8 @@ vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").
 
 
 -- FTerm
-vim.api.nvim_set_keymap("n", '<C-i>', '<CMD>lua require("FTerm").toggle()<CR>', {noremap = true, silent= true})
-vim.api.nvim_set_keymap("t", '<C-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', {noremap = true, silent= true})
+-- vim.api.nvim_set_keymap("n", '<C-i>', '<CMD>lua require("FTerm").toggle()<CR>', {noremap = true, silent= true})
+-- vim.api.nvim_set_keymap("t", '<C-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', {noremap = true, silent= true})
 
 
 -- =====================
