@@ -55,6 +55,7 @@ require('treesitter-settings')
 require('autopair-settings')
 require('nvimtree-settings')
 require('toggleterm-settings')
+require('dashboard-settings')
 
 -- Keymap settings (Include Which-key settings)
 require('keymappings')
