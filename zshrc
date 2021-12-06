@@ -97,7 +97,7 @@ zplug "plugins/git",  from:oh-my-zsh, as:plugin
 # e.g., zsh-syntax-highlighting must be loaded
 # after executing compinit command and sourcing other plugins
 # (If the defer tag is given 2 or above, run after compinit command)
-zplug "zdharma/fast-syntax-highlighting", defer:2
+zplug "zdharma-continuum/fast-syntax-highlighting", defer:2
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
