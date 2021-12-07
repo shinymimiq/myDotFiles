@@ -117,6 +117,7 @@ zplug load  # Quitely load plugins
 # Alias
 # =============================
 alias nv="nvim"
+alias lv="$HOME/.local/bin/lvim"
 alias ws="cd $WORKSPACE"
 
 # common
