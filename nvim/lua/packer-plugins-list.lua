@@ -87,7 +87,7 @@ return require('packer').startup(function()
       cmd = "LazyGit",
   }
 
-  -- use {'glepnir/dashboard-nvim'}
+  use {'glepnir/dashboard-nvim'}
 
   -- Floating term
 --   use {
