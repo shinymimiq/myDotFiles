@@ -4,7 +4,7 @@ TERMINAL = vim.fn.expand('$TERMINAL')
 vim.cmd('let &titleold="'..TERMINAL..'"')
 vim.o.titlestring="%<%F%=%l/%L - nvim"
 
-vim.o.termguicolors = true
+-- vim.o.termguicolors = true
 
 vim.wo.number = true -- line number
 vim.wo.relativenumber = true -- relative line number
@@ -50,24 +50,18 @@ require('telescope-settings')
 require('compe-settings')
 require('galaxyline-settings')
 require('treesitter-settings')
--- require('lsp-install-settings')
--- require('lspInstall-settings')
+require('lspInstall-settings')
 require('autopair-settings')
 require('nvimtree-settings')
 -- require('toggleterm-settings')
-require('dashboard-settings')
+-- require('dashboard-settings')
 
 -- Keymap settings (Include Which-key settings)
 require('keymappings')
 
--- lsp
-require('lsp/efm')
-require('lsp/js')
-require('lsp/lua')
-require('lsp/cpp')
-
 -- Theme
-require('onedark').setup()
-
+-- require('onedark').setup()
+vim.opt.termguicolors = true
+vim.cmd("colorscheme melange")
 
 

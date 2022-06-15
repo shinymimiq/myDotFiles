@@ -35,9 +35,10 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- lsp
-  use {"kabouzeid/nvim-lspinstall"}
-  use {"neovim/nvim-lspconfig"}
-  use {"glepnir/lspsaga.nvim"}
+  use {
+    "williamboman/nvim-lsp-installer",
+    "neovim/nvim-lspconfig",
+  }
 
   -- completion
   use {"hrsh7th/nvim-compe"}
@@ -47,7 +48,8 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Theme
-  use 'navarasu/onedark.nvim'
+  -- use 'navarasu/onedark.nvim'
+  use "savq/melange"
 
   -- explorer
   use {
@@ -62,8 +64,8 @@ return require('packer').startup(function()
   use {'romgrk/barbar.nvim'}
 
   use {
-    'shinymimiq/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
@@ -85,7 +87,7 @@ return require('packer').startup(function()
       cmd = "LazyGit",
   }
 
-  use {'glepnir/dashboard-nvim'}
+  -- use {'glepnir/dashboard-nvim'}
 
   -- Floating term
 --   use {
@@ -98,7 +100,7 @@ return require('packer').startup(function()
 --     end
 -- }
 
-  use {"akinsho/nvim-toggleterm.lua"}
+  -- use {"akinsho/nvim-toggleterm.lua"}
 
 
   use {"terrortylor/nvim-comment"}
