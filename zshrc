@@ -18,7 +18,7 @@ export LANG=en_GB.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export WORKSPACE=$HOME/Developer
+export DEVSPACE=$HOME/Developer
 
 
 # navigation through command history
@@ -74,13 +74,13 @@ setopt pushdminus
 
 # zplug 
 # Check if zplug is installed
-ZPLUG_HOME=$WORKSPACE/zsh/zplug
+ZPLUG_HOME=$DEVSPACE/zsh/zplug
 if [[ ! -d $ZPLUG_HOME ]]; then
     git clone https://github.com/zplug/zplug $ZPLUG_HOME
     source $ZPLUG_HOME/init.zsh && zplug update
 fi
 
-source $WORKSPACE/zsh/zplug/init.zsh
+source $DEVSPACE/zsh/zplug/init.zsh
 # ====================================
 zplug "zsh-users/zsh-autosuggestions"
 
@@ -117,8 +117,6 @@ zplug load  # Quitely load plugins
 # Alias
 # =============================
 alias nv="nvim"
-alias lv="$HOME/.local/bin/lvim"
-alias ws="cd $WORKSPACE"
 
 # common
 alias ls='exa'     #size,show type,human readable
@@ -171,7 +169,7 @@ bindkey "^j" down-line-or-beginning-search # Down
 
 # Source work zshrc
 if [[ ! -z "${WORKING_MACHINE}" ]]; then
-    source $WORKSPACE/myDotFiles/zsh-work-local
+    source $DEVSPACE/myDotFiles/zsh-work-local
 fi
 
 
@@ -189,5 +187,5 @@ export NVM_DIR="$HOME/.nvm"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f $WORKSPACE/myDotFiles/p10k.zsh ]] || source $WORKSPACE/myDotFiles/p10k.zsh
+[[ ! -f $DEVSPACE/myDotFiles/p10k.zsh ]] || source $DEVSPACE/myDotFiles/p10k.zsh
 
