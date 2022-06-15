@@ -50,8 +50,12 @@ return require('packer').startup(function()
   use 'navarasu/onedark.nvim'
 
   -- explorer
-  use {'kyazdani42/nvim-tree.lua'}
-  use 'kyazdani42/nvim-web-devicons'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    }
+  }
 
   -- statusline and tabline
   use { 'glepnir/galaxyline.nvim' }
