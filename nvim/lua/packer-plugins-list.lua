@@ -38,6 +38,7 @@ return require('packer').startup(function()
   use {
     "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
+    "glepnir/lspsaga.nvim",
   }
 
   -- completion
@@ -50,6 +51,7 @@ return require('packer').startup(function()
   -- Theme
   -- use 'navarasu/onedark.nvim'
   use "savq/melange"
+  use "sainnhe/sonokai"
 
   -- explorer
   use {
