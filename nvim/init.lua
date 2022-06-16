@@ -62,7 +62,7 @@ require('keymappings')
 -- Theme
 -- require('onedark').setup()
 vim.opt.termguicolors = true
-vim.g.sonokai_style = "espresso"
+vim.g.sonokai_style = "default"
 vim.g.sonokai_better_performance = true
 vim.cmd("colorscheme sonokai")
 
