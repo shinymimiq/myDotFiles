@@ -11,7 +11,7 @@ local jsts_args = {
 
 require "lspconfig".efm.setup {
   -- cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver", '-logfile', '/Users/shinymimiq/tmp/efm.log', '-loglevel', '5'},
-  cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
+  cmd = {DATA_PATH .. "/lsp_servers/efm/efm-langserver"},
   init_options = {documentFormatting = true},
   filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact", "lua"},
   settings = {

@@ -59,6 +59,12 @@ require('dashboard-settings')
 -- Keymap settings (Include Which-key settings)
 require('keymappings')
 
+-- lsp
+require('lsp/efm')
+require('lsp/cpp')
+require('lsp/lua')
+require('lsp/python')
+
 -- Theme
 -- require('onedark').setup()
 vim.opt.termguicolors = true
