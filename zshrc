@@ -1,13 +1,6 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Common initial setup
 
-export LANG=en_GB.UTF-8
+export LANG=en_US.UTF-8
 
 # if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
@@ -84,13 +77,14 @@ source $DEVSPACE/zsh/zplug/init.zsh
 # ====================================
 zplug "zsh-users/zsh-autosuggestions"
 
-zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "nyquase/vi-mode"
 zplug "zsh-users/zsh-completions", depth:1
 
 # Use lib/clipboard plugin only on Mac
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "plugins/git",  from:oh-my-zsh, as:plugin
+
+zplug "reobin/typewritten", as:theme
 
 
 # Set the priority when loading
@@ -186,6 +180,5 @@ export NVM_DIR="$HOME/.nvm"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f $DEVSPACE/myDotFiles/p10k.zsh ]] || source $DEVSPACE/myDotFiles/p10k.zsh
-
+# prompt
+prompt typewritten
