@@ -84,7 +84,7 @@ zplug "zsh-users/zsh-completions", depth:1
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "plugins/git",  from:oh-my-zsh, as:plugin
 
-zplug "reobin/typewritten", as:theme
+zplug "modules/prompt", from:prezto
 
 
 # Set the priority when loading
@@ -181,4 +181,4 @@ export NVM_DIR="$HOME/.nvm"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # prompt
-prompt typewritten
+prompt minimal
