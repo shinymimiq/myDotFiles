@@ -152,6 +152,8 @@ function d () {
 }
 compdef _dirs d
 
+alias g="lazygit"
+
 # =======================
 # END ALIAS
 
