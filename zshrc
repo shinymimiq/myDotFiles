@@ -1,6 +1,7 @@
 # Common initial setup
 
 export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 # if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
@@ -110,7 +111,6 @@ zplug load  # Quitely load plugins
 
 # Alias
 # =============================
-alias nv="nvim"
 
 # common
 alias ls='exa'     #size,show type,human readable
@@ -153,6 +153,9 @@ function d () {
 compdef _dirs d
 
 alias g="lazygit"
+alias tmux="tmux -u" # tmux font issue over ssh
+alias nv="nvim"
+alias nvc="nvim --noplugin" # nvim without plugin
 
 # =======================
 # END ALIAS

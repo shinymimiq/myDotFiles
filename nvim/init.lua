@@ -64,6 +64,7 @@ require('lsp/efm')
 require('lsp/cpp')
 require('lsp/lua')
 require('lsp/python')
+require('lsp/groovy')
 
 -- Theme
 -- require('onedark').setup()

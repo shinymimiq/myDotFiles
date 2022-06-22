@@ -4,5 +4,5 @@ local clangd_binary = clangd_root_path.."/clangd"
 
 require'lspconfig'.clangd.setup{
   cmd = {clangd_binary},
-  filetypes = {"c", "cpp","objc", "objcpp"},
+  filetypes = {"c", "cpp","objc", "objcpp","cc"},
 }
