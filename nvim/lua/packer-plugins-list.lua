@@ -97,6 +97,8 @@ return require('packer').startup(function()
     }
   }
 
+  use("nathom/filetype.nvim")
+
   -- Floating term
 --   use {
 --     "numtostr/FTerm.nvim",
@@ -114,5 +116,7 @@ return require('packer').startup(function()
   use {"terrortylor/nvim-comment"}
   use {"windwp/nvim-autopairs"}
 
+  -- Utils
+  use {"tweekmonster/startuptime.vim"}
 end)
 

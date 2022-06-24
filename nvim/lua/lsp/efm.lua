@@ -13,7 +13,7 @@ require "lspconfig".efm.setup {
   -- cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver", '-logfile', '/Users/shinymimiq/tmp/efm.log', '-loglevel', '5'},
   cmd = {DATA_PATH .. "/lsp_servers/efm/efm-langserver"},
   init_options = {documentFormatting = true},
-  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact", "lua", "python", "cpp"},
+  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact", "lua", "python", "cpp","beancount"},
   settings = {
     rootMarkers = {".git/"},
     languages = {

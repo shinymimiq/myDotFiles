@@ -54,6 +54,9 @@ vim.api.nvim_exec(
 	false
 )
 
+-- Do not source the default filetype.vim, we have a plugin installed
+vim.g.did_load_filetypes = 1
+
 
 -- Enable Packer with Plugins
 require('packer-plugins-list')
@@ -70,6 +73,7 @@ require('nvimtree-settings')
 -- require('toggleterm-settings')
 require('dashboard-settings')
 require('session-manager')
+require('filetype-settings')
 
 -- Keymap settings (Include Which-key settings)
 require('keymappings')
