@@ -40,6 +40,20 @@ vim.o.completeopt = "menuone,noselect"
 -- for whichkey
 vim.o.timeoutlen = 100
 
+-- don't auto comment new lines
+vim.cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
+
+-- highlight on yank
+vim.api.nvim_exec(
+	[[
+  augroup YankHighlight
+  au!
+  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=369}
+  augroup end
+  ]],
+	false
+)
+
 
 -- Enable Packer with Plugins
 require('packer-plugins-list')
@@ -55,6 +69,7 @@ require('autopair-settings')
 require('nvimtree-settings')
 -- require('toggleterm-settings')
 require('dashboard-settings')
+require('session-manager')
 
 -- Keymap settings (Include Which-key settings)
 require('keymappings')
@@ -65,6 +80,7 @@ require('lsp/cpp')
 require('lsp/lua')
 require('lsp/python')
 require('lsp/groovy')
+require('lsp/beancount')
 
 -- Theme
 -- require('onedark').setup()

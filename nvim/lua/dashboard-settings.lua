@@ -1,9 +1,6 @@
 vim.g.dashboard_default_executive = "telescope"
 vim.cmd 'let g:dashboard_session_directory = "~/.config/nvim/.sessions"'
 vim.cmd("let packages = len(globpath('~/.local/share/nvim/site/pack/packer/start', '*', 0, 1))")
-vim.api.nvim_exec([[
-    let g:dashboard_custom_footer = ['LuaJIT loaded '..packages..' packages']
-]], false)
 
 local db = require('dashboard')
 db.custom_header= {
@@ -30,10 +27,12 @@ db.custom_header= {
 }
 
 db.custom_center = {
-  { icon = '  ', desc = 'Recently Opened Files     ', action = 'Telescope oldfiles'},
-  { icon = '  ', desc = 'Find File                 ', action = 'Telescope find_files'},
-  { icon = '  ', desc = 'Find Word                 ', action = 'Telescope live_grep'},
-  { icon = '  ', desc = 'Open Neovim Configuration ', action = ':e ~/.config/nvim/init.lua'},
+  { icon = '  ', desc = 'Recently Opened Files     ', action = 'Telescope oldfiles', shortcut = 'SPC f b'},
+  { icon = '  ', desc = 'Find File                 ', action = 'Telescope find_files', shortcut = 'SPC f'},
+  { icon = '  ', desc = 'Find Word                 ', action = 'Telescope live_grep', shortcut = 'SPC r'},
+  -- { icon = '  ', desc = 'Open Neovim Configuration ', action = ':e ~/.config/nvim/init.lua'},
+  { icon = '  ', desc = 'Open MyDotFiles           ', action = ':cd ~/Developer/myDotFiles |:e ~/Developer/myDotFiles/nvim/init.lua | :NvimTreeToggle'},
+  { icon = '  ', desc = 'Load last Session         ', action = 'SessionManager load_last_session'},
 }
 
 db.session_directory ="~/.config/nvim/.sessions" 

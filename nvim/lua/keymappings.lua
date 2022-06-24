@@ -51,8 +51,8 @@ vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- Telescope
-vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files theme=get_ivy<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<Leader>r', ':Telescope live_grep theme=get_ivy<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files theme=dropdown<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>r', ':Telescope live_grep theme=dropdown<CR>', {noremap = true, silent = true})
 
 
 -- nvim-compe
@@ -182,27 +182,28 @@ local keymap = {
     s = {"<cmd>Gitsigns stage_hunk<CR>", "Stage Hunk"},
     S = {"<cmd>Gitsigns stage_buffer<CR>", "Stage Buffer"},
     u = {"<cmd>Gitsigns undo_stage_hunk<CR>", "Undo Stage Hunk"},
-    o = {"<cmd>Telescope git_status theme=get_ivy<CR>", "Changed Files List"},
-    b = {"<cmd>Telescope git_branches theme=get_ivy<CR>", "Checkout branch"},
-    c = {"<cmd>Telescope git_commits theme=get_ivy<CR>", "Checkout commits"},
-    C = {"<cmd>Telescope git_bcommits theme=get_ivy<CR>", "Checkout commits on current file"},
+    o = {"<cmd>Telescope git_status theme=dropdown<CR>", "Changed Files List"},
+    b = {"<cmd>Telescope git_branches theme=dropdown<CR>", "Checkout branch"},
+    c = {"<cmd>Telescope git_commits theme=dropdown<CR>", "Checkout commits"},
+    C = {"<cmd>Telescope git_bcommits theme=dropdown<CR>", "Checkout commits on current file"},
   },
   l = {
     name = 'LSP',
     a = {"<cmd>Lspsaga code_action<CR>", "Code Actions"},
     A = {"<cmd>Lspsaga range_code_action<CR>", "Selected Actions"},
-    d = {"<cmd>Telescope lsp_document_diagnostics theme=get_ivy<cr>", "Document Diagnostics"},
-    D = {"<cmd>Telescope lsp_workspace_diagnostics theme=get_ivy<cr>", "Workspace Diagnostics"},
-    s = {"<cmd>Telescope lsp_document_symbols theme=get_ivy<cr>", "Document Symbols"},
-    S = {"<cmd>Telescope lsp_workspace_symbols theme=get_ivy<cr>", "Workspace Symbols"},
-    q = {"<cmd>Telescope quickfix theme=get_ivy<cr>", "Quickfix"},
+    d = {"<cmd>Telescope lsp_document_diagnostics theme=dropdown<cr>", "Document Diagnostics"},
+    D = {"<cmd>Telescope lsp_workspace_diagnostics theme=dropdown<cr>", "Workspace Diagnostics"},
+    s = {"<cmd>Telescope lsp_document_symbols theme=dropdown<cr>", "Document Symbols"},
+    S = {"<cmd>Telescope lsp_workspace_symbols theme=dropdown<cr>", "Workspace Symbols"},
+    q = {"<cmd>Telescope quickfix theme=dropdown<cr>", "Quickfix"},
     x = {"<cmd>cclose<cr>", "Close Quickfix"},
     r = {"<cmd>Lspsaga rename<cr>", "Rename symbol"},
     p = {"<cmd>Lspsaga preview_definition<cr>", "Preview definition"},
     -- TODO: Fix the type definition and formatting call
     -- t = {"<cmd>lua vim.lsp.buf.type_definition<cr>", "Type definition"},
     f = {"<cmd>lua vim.lsp.buf.formatting()<cr>", "Format"},
-    L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line diagnostic"},
+    i = {"<cmd>Lspsaga lsp_finder", "Lsp Finder"},
+    -- L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line diagnostic"},
   }
 }
 

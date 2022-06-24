@@ -91,6 +91,12 @@ return require('packer').startup(function()
 
   use {'glepnir/dashboard-nvim'}
 
+  use {'Shatur/neovim-session-manager',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
+
   -- Floating term
 --   use {
 --     "numtostr/FTerm.nvim",
