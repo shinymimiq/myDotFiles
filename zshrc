@@ -168,7 +168,7 @@ bindkey "^j" down-line-or-beginning-search # Down
 
 # Source work zshrc
 if [[ ! -z "${WORKING_MACHINE}" ]]; then
-    source $DEVSPACE/myDotFiles/zsh-work-local
+    source $DEVSPACE/myDotFiles/work/zsh-work-local
 fi
 
 
@@ -184,6 +184,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --exclude .git --color=always'
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # prompt
 prompt minimal

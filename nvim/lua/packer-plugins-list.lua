@@ -112,6 +112,7 @@ return require('packer').startup(function()
 
   -- use {"akinsho/nvim-toggleterm.lua"}
 
+  use {"neomake/neomake"}
 
   use {"terrortylor/nvim-comment"}
   use {"windwp/nvim-autopairs"}
