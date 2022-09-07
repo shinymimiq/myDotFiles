@@ -85,6 +85,7 @@ require('lsp/lua')
 require('lsp/python')
 require('lsp/groovy')
 require('lsp/beancount')
+require('lsp/bash')
 
 -- Theme
 -- require('onedark').setup()
