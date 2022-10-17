@@ -80,6 +80,9 @@ return require('packer').startup(function()
     }
   }
 
+  -- indent
+  use "lukas-reineke/indent-blankline.nvim"
+
   -- Whichkey
   use {"folke/which-key.nvim"}
 

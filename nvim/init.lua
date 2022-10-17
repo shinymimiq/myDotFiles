@@ -8,16 +8,15 @@ vim.o.titlestring="%<%F%=%l/%L - nvim"
 
 vim.wo.number = true -- line number
 vim.wo.relativenumber = true -- relative line number
-vim.bo.tabstop = 2
-vim.bo.expandtab = true
-vim.bo.smartindent = true
+vim.go.tabstop = 2
+vim.go.shiftwidth = 2
+vim.go.expandtab = true -- convert tab into space
+vim.go.smartindent = true
 vim.o.showtabline = 2 -- always show tab on top
 vim.wo.cursorline = true -- show current line
 vim.wo.wrap = true -- wrap line
 
 
-vim.o.shiftwidth = 2
-vim.o.shiftround = true
 vim.cmd('filetype plugin on')
 vim.cmd('syntax on')
 vim.o.mouse = "a" -- Enable mouse
@@ -57,6 +56,11 @@ vim.api.nvim_exec(
 -- Do not source the default filetype.vim, we have a plugin installed
 vim.g.did_load_filetypes = 1
 
+-- filetype:
+vim.cmd([[
+  autocmd Filetype c setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+  autocmd Filetype cpp setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+]])
 
 -- Enable Packer with Plugins
 require('packer-plugins-list')
