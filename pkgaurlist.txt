@@ -1,0 +1,3 @@
+aconfmgr-git
+beancount
+python-magic-ahupp
